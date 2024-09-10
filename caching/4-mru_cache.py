@@ -15,7 +15,7 @@ class MRUCache(BaseCaching):
         self.queue = deque()
 
     def put(self, key, item):
-        """Must assign to the dictionary self.cache_data the item value for the key key"""
+        """Must assign to the dictionary self.cache_data"""
         if key and item:
             if key in self.cache_data:
                 self.queue.remove(key)
@@ -32,11 +32,11 @@ class MRUCache(BaseCaching):
             return self.cache_data.get(key)
 
     def is_full(self):
-        """If the number of items in self.cache_data is higher that BaseCaching.MAX_ITEMS"""
+        """If the number of items in self.cache_data"""
         return len(self.cache_data) >= self.MAX_ITEMS
 
     def evict(self):
-        """you must print DISCARD: with the key discarded and following by a new line"""
+        """you must print DISCARD: with the key discarded"""
         popped = self.queue.pop()
         del self.cache_data[popped]
         print("DISCARD: " + str(popped))
