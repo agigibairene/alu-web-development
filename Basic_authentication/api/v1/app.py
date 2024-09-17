@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """1. Error handler: Unauthorized"""
 from os import getenv
 from api.v1.views import app_views
