@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""For testing this new error handler, add a new endpoint"""
+""" Module of Index views """
 from flask import jsonify, abort
 from api.v1.views import app_views
 
