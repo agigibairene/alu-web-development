@@ -1,8 +1,5 @@
-
 #!/usr/bin/env python3
-"""
-Module for authentication
-"""
+"""Module for authentication"""
 import os
 from typing import List, TypeVar
 
