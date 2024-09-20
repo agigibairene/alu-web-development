@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-'''create a class to manage the API authentication.'''
+'''Auth class to manage API authentication'''
 
 from flask import request
 from typing import List, TypeVar
@@ -22,7 +22,7 @@ class Auth:
         if path in excluded_paths:
             return False
         for p in excluded_paths:
-            if not p.endswith("*"):
+            if not p.endswith("*" ):
                 p += "*"
             # if not p.endswith("/" ):
             #     p += "/"
